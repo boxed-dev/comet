@@ -13,7 +13,7 @@ load_dotenv()
 
 def generate_grocery_list(family_size, dietary_preferences, api_key):
     # model = ChatOpenAI(model="gpt-4")
-    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, openai_api_key="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")
+    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, openai_api_key=api_key)
 
     prompt_template_grocery = PromptTemplate(
         input_variables = ['family_size', 'dietary_preferences'],
