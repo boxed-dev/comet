@@ -17,7 +17,7 @@ def generate_grocery_list(family_size, dietary_preferences, api_key):
 
     prompt_template_grocery = PromptTemplate(
         input_variables = ['family_size', 'dietary_preferences'],
-        template = "I have a family of {family_size} members and our dietary preferences are {dietary_preferences}. Suggest me a monthly grocery list suitable for us also include necessary items such as for cleaning and other necessary stuffs required for indian families also dont ever recommed items that are controversial in india(such as beef) also provide the approx price of the item in front of the item name."
+        template = "I have a family of {family_size} members and our dietary preferences are {dietary_preferences}. Suggest me a monthly grocery list(the food items should be enough to consume for 30 days) suitable for us also include necessary items such as for cleaning and other necessary stuffs required for indian families also dont ever recommed items that are controversial in india(such as beef) also provide the approx price of the item in front of the item name."
     )
 
     grocery_chain = LLMChain(llm=llm, prompt=prompt_template_grocery, output_key="grocery_list")
